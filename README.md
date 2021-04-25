@@ -17,7 +17,20 @@ edit src/main/my_app.cljs and uncomment the fulcro lines, run the report again.
 
 --------------------------------------------------------------------------------
 
-Report without fulcro:
+This code produces the following build report:
+
+```clojure
+(ns my-app
+  (:require
+    ["react" :as react]
+    ["react-dom" :as react-dom]))
+
+(defn ^:export init []
+  (react-dom/render
+    (react/createElement "div" #js{} "Hello world")
+    (js/document.getElementById "app")))
+```
+
 ```
 | Resource                             |   Optimized |  Total % |          JS |      Source |
 |--------------------------------------+-------------+----------+-------------+-------------|
@@ -29,6 +42,29 @@ Report without fulcro:
 | jar | goog/base.js                   |    208.0 B  |   0.16 % |    127.7 KB |    127.7 KB |
 |     | my_app.cljs                    |    117.0 B  |   0.09 % |    269.0 B  |    565.0 B  |
 |     | shadow/module/main/append.js   |     88.0 B  |   0.07 % |    110.0 B  |    110.0 B  |
+```
+
+
+This code produces the following build report, which includes cljs.pprint amongst
+others (expound, spec.gen, etc ):
+
+```clojure
+(ns my-app
+  (:require
+    ["react" :as react]
+    ["react-dom" :as react-dom]
+    [com.fulcrologic.fulcro.application :as app]
+    [com.fulcrologic.fulcro.components :as c :refer [defsc]]))
+
+(defsc Hello [this props]
+ {:query         []
+  :initial-state (fn [_])}
+ (react/createElement "div" #js{} "Hello worlds"))
+
+(defonce app (app/fulcro-app {:render-root! react-dom/render}))
+
+(defn ^:export init []
+  (app/mount! app Hello "app"))
 ```
 
 Build report with fulcro:
