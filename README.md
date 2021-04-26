@@ -5,7 +5,8 @@ To quote Tony Kay
 
 The references are missing to the "90%" of people.
 
-update. To attempt fixing this try using ns-aliases to these stubs:
+So, if you are one of the lucky 10 per-centers then you may try using stub namespaces to deal with this issue:
+
 
 https://github.com/fulcrologic/guardrails/blob/develop/src/main/com/fulcrologic/guardrails/noop.cljc
 
