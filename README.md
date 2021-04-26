@@ -1,3 +1,9 @@
+update. To attempt fixing this try using ns-aliases to these stubs:
+
+https://github.com/fulcrologic/guardrails/blob/develop/src/main/com/fulcrologic/guardrails/noop.cljc
+
+https://github.com/day8/re-frame-10x#easy-setup
+
 Repo to investigate fulcro including cljs.pprint in release builds.
 
 Development:
