@@ -8,4 +8,8 @@
  :builds
  {:main
   {:target  :browser
-   :modules {:main {:init-fn my-app/init}}}}}
+   :modules {:main {:init-fn my-app/init}}
+   #_#_:release
+   {:build-options
+    {:ns-aliases
+     {com.fulcrologic.guardrails.core com.fulcrologic.guardrails.noop}}}}}}

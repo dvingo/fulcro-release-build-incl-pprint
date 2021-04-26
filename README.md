@@ -1,11 +1,20 @@
-_Update:_ You may try using stub namespaces of guardrails to deal with this issue:
+Repo demonstrating how to cut out guardrails dev-time dependencies from fulcro release builds.
+
+mainly: cljs.pprint and expound.
 
 https://github.com/fulcrologic/guardrails/blob/develop/src/main/com/fulcrologic/guardrails/noop.cljc
 
-https://github.com/day8/re-frame-10x#easy-setup
+Before:
 
---- 
-Repo to investigate fulcro including cljs.pprint in release builds.
+```
+:main [JS: 692.69 KB] [GZIP: 184.34 KB]
+```
+
+After:
+
+```
+:main [JS: 526.59 KB] [GZIP: 143.4 KB]
+```
 
 Development:
 ```bash
@@ -22,6 +31,9 @@ yarn run report
 
 edit src/main/my_app.cljs and uncomment the fulcro lines, run the report again.
 
+edit: shadow-cljs.edn and uncomment the ns-alias form.
+
+run the report again.
 --------------------------------------------------------------------------------
 
 This code produces the following build report:
