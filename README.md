@@ -1,17 +1,10 @@
-To quote Tony Kay 
-> On load times. Yeah. 2.5s for an SPA you load once and run for hours. Just don’t care.
-
-> And the optimization paths are available to you. Obviously I care enough that you are able to follow those paths. When I say I don’t care, I mean I don’t care for my personal use-cases, and 90% of the ppl I’ve seen optimizing for this shouldn’t either.
-
-The references are missing to the "90%" of people.
-
-So, if you are one of the lucky 10-percenters then you may try using stub namespaces to deal with this issue:
-
+_Update:_ You may try using stub namespaces of guardrails to deal with this issue:
 
 https://github.com/fulcrologic/guardrails/blob/develop/src/main/com/fulcrologic/guardrails/noop.cljc
 
 https://github.com/day8/re-frame-10x#easy-setup
 
+--- 
 Repo to investigate fulcro including cljs.pprint in release builds.
 
 Development:
