@@ -5,7 +5,7 @@ To quote Tony Kay
 
 The references are missing to the "90%" of people.
 
-So, if you are one of the lucky 10 per-centers then you may try using stub namespaces to deal with this issue:
+So, if you are one of the lucky 10-percenters then you may try using stub namespaces to deal with this issue:
 
 
 https://github.com/fulcrologic/guardrails/blob/develop/src/main/com/fulcrologic/guardrails/noop.cljc
